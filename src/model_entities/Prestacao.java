@@ -37,7 +37,7 @@ public class Prestacao {
 
 	@Override
 	public String toString() {
-		return sdf.format(dataVencimento + " - " + String.format("%.2f", montante));
+		return sdf.format(dataVencimento) + " - " + String.format("%.2f", montante);
 	}
 	
 	

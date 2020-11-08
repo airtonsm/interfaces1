@@ -1,5 +1,6 @@
 package model_entities;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -9,11 +10,8 @@ public class Contrato {
 	private Date data;
 	private Double valorTotal;
 	
-	List<Prestacao> prestacao;	
+	private List<Prestacao> prestacao =  new ArrayList<Prestacao>();	
 	
-	public Contrato() {
-		
-	}
 	
 	public Contrato(Integer numero, Date data, Double valorTotal) {
 		this.numero = numero;
@@ -42,6 +40,14 @@ public class Contrato {
 
 	public List<Prestacao> getPrestacao() {
 		return prestacao;
+	}
+	
+	public void adicionarPrestacao(Prestacao prestacao) {
+		this.prestacao.add(prestacao);
+	}
+	
+	public void removePrestacao(Prestacao prestacao) {
+		this.prestacao.remove(prestacao);
 	}
 
 }

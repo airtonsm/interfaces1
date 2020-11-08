@@ -25,9 +25,9 @@ public class ContratoServico {
 			
 			double parcelaTotal = parcelaAtualizada + servicoPagamento.taxaPagamento(parcelaAtualizada);
 			
-			Date DueDate = adicionarMeses(contrato.getData(), i);
+			Date dataVencimento = adicionarMeses(contrato.getData(), i);
 			
-			contrato.getPrestacao().add(new Prestacao(DueDate, parcelaTotal));
+			contrato.getPrestacao().add(new Prestacao(dataVencimento, parcelaTotal));
 			
 		}
 	}
