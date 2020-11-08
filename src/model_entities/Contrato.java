@@ -11,6 +11,10 @@ public class Contrato {
 	
 	List<Prestacao> prestacao;	
 	
+	public Contrato() {
+		
+	}
+	
 	public Contrato(Integer numero, Date data, Double valorTotal) {
 		this.numero = numero;
 		this.data = data;
